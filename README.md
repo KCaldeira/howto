@@ -2,10 +2,6 @@
 
 ## CHECK OUT GITHUB ARCHIVE AND MAKE VIRTUAL ENVIRONMENT
 
-### 0) (Only once on a brand-new Ubuntu/WSL install)
-sudo apt update
-sudo apt install -y git python3 python3-venv python3-pip
-
 ### 1) Clone the repo (HTTPS example)
 git clone <REPO_URL>  # e.g., https://github.com/owner/project.git
 cd <project>          # cd into the new folder
