@@ -24,6 +24,94 @@ pip install -r requirements.txt
 ### 6) (Optional) Verify installs
 pip check  # reports broken or conflicting deps, if any
 
+## How to activate or deactivate base environment in conda
+
+Sure — here’s the complete file ready to save as
+`conda_environments.md`.
+You can copy and paste the whole thing into VS Code or any Markdown editor.
+
+---
+
+# Managing Conda Virtual Environments
+
+## 🧪 Create a New Environment
+```bash
+# Create a new environment named "myenv" with Python 3.11
+conda create -n myenv python=3.11
+````
+
+---
+
+## ▶️ Activate / Deactivate
+
+```bash
+# Activate the environment
+conda activate myenv
+
+# Deactivate the environment (return to previous or base)
+conda deactivate
+```
+
+---
+
+## ⚙️ Fix “CommandNotFoundError” (Conda Not Initialized)
+
+If you see an error like
+`CommandNotFoundError: conda activate not found`,
+you need to initialize Conda in your shell.
+
+### For WSL / Ubuntu / macOS (bash or zsh)
+
+```bash
+conda init bash     # or conda init zsh
+exec "$SHELL"       # reload the shell
+```
+
+### For Windows PowerShell
+
+```powershell
+conda init powershell
+# then close and reopen PowerShell
+```
+
+---
+
+## 📋 Useful Commands
+
+```bash
+conda env list                 # List all available environments
+conda activate /path/to/env    # Activate by full path instead of name
+conda env remove -n myenv      # Delete an environment
+conda run -n myenv python -V   # Run a command in an environment without activating
+conda config --set auto_activate_base false  # Disable automatic base activation
+```
+
+---
+
+## 💡 Tip for VS Code
+
+* Press **Ctrl + Shift + P** → select **Python: Select Interpreter**.
+* Choose your Conda environment (e.g., `myenv`).
+* Alternatively, open a new terminal **after activating** Conda; VS Code will use that environment automatically.
+
+---
+
+## 🧰 Optional: Environment File Workflow
+
+You can save or recreate environments from an `environment.yml` file:
+
+```bash
+# Export the current environment
+conda env export > environment.yml
+
+# Create a new one from the file
+conda env create -f environment.yml
+
+# Update an existing one
+conda env update -f environment.yml
+```
+
+
 
 ## How to View CSV Files in WSL 2 (Ubuntu)
 
