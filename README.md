@@ -24,6 +24,10 @@ pip install -r requirements.txt
 ### 6) (Optional) Verify installs
 pip check  # reports broken or conflicting deps, if any
 
+### 7) Create .gitignore
+
+Go to an LLM like Claude Code and ask it to make a .gitignore file to avoid uploading .venv to github
+
 ## How to activate or deactivate base environment in conda
 
 Sure — here’s the complete file ready to save as
