@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ### 6) (Optional) Verify installs
 pip check  # reports broken or conflicting deps, if any
 
-### 7) Create .gitignore
+### 7) If a repository newly created on github, create .gitignore
 
 Go to an LLM like Claude Code and ask it to make a .gitignore file to avoid uploading .venv to github
 
