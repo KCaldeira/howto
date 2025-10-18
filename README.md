@@ -4,6 +4,7 @@
 
 ### 1) Clone the repo (HTTPS example)
 git clone <REPO_URL>  # e.g., https://github.com/owner/project.git
+
 cd <project>          # cd into the new folder
 
 ### (If the repo uses submodules)
