@@ -105,7 +105,3 @@ Optional suffixes for pre-releases:
 
 * `v2.0.0-beta1`
 * `v2.0.0-rc1` (release candidate)
-
----
-
-Would you like me to add an example showing how to tag a specific commit (not just HEAD)?
