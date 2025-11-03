@@ -1,1 +1,111 @@
+Here’s an extended version you can paste directly into your markdown file — includes **semantic versioning conventions** and examples:
 
+---
+
+## Git Tags
+
+### List all tags
+
+```bash
+git tag
+```
+
+### View details of a specific tag
+
+```bash
+git show <tagname>
+```
+
+---
+
+### Create a new lightweight tag
+
+```bash
+git tag <tagname>
+```
+
+Example:
+
+```bash
+git tag v1.0
+```
+
+---
+
+### Create an annotated tag (recommended)
+
+Annotated tags store metadata such as author, date, and message.
+
+```bash
+git tag -a <tagname> -m "Description of this release"
+```
+
+Example:
+
+```bash
+git tag -a v1.0.0 -m "Initial stable release"
+```
+
+---
+
+### Push tags to the remote repository
+
+Push a single tag:
+
+```bash
+git push origin <tagname>
+```
+
+Push all local tags:
+
+```bash
+git push origin --tags
+```
+
+---
+
+### Delete a tag
+
+Delete locally:
+
+```bash
+git tag -d <tagname>
+```
+
+Delete remotely:
+
+```bash
+git push origin --delete <tagname>
+```
+
+---
+
+## Tag Naming Conventions (Semantic Versioning)
+
+Use [Semantic Versioning (SemVer)](https://semver.org) to label releases consistently.
+
+Format:
+
+```
+v<MAJOR>.<MINOR>.<PATCH>
+```
+
+* **MAJOR** — incompatible API or model changes
+* **MINOR** — backward-compatible additions or feature updates
+* **PATCH** — backward-compatible bug fixes
+
+Examples:
+
+* `v1.0.0` — first stable release
+* `v1.1.0` — adds new features, backward-compatible
+* `v1.1.1` — minor bug fix or performance improvement
+* `v2.0.0` — major refactor or breaking change
+
+Optional suffixes for pre-releases:
+
+* `v2.0.0-beta1`
+* `v2.0.0-rc1` (release candidate)
+
+---
+
+Would you like me to add an example showing how to tag a specific commit (not just HEAD)?
